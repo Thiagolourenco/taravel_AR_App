@@ -1,6 +1,7 @@
 import {ImageStyle, StyleSheet, TextStyle, ViewStyle} from 'react-native';
 
 interface IHomeStyle {
+  buttonScan: ViewStyle;
   container: ViewStyle;
   header: ViewStyle;
   image_profile: ImageStyle;
@@ -24,10 +25,42 @@ interface IHomeStyle {
   buttonDetailText: TextStyle;
   textMin: TextStyle;
   listCard: ViewStyle;
+
+  viewCardNearest: ViewStyle;
+  viewCardStreet: ViewStyle;
+  cardDescription: ViewStyle;
+  cardDescriptionText: TextStyle;
+  cardViewDescription: ViewStyle;
+  cardStreetText: TextStyle;
+  cardStreetButton: ViewStyle;
+  cardStreetTextMi: TextStyle;
+  cardImageHotel: ImageStyle;
 }
 
 export default (): IHomeStyle => {
   return StyleSheet.create({
+    buttonScan: {
+      backgroundColor: '#45BFE4',
+      width: 69,
+      height: 69,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 19,
+
+      position: 'absolute',
+      right: 22,
+      bottom: 32,
+
+      shadowColor: 'rgba(69, 191, 228, 0.5)',
+      shadowOffset: {
+        width: 0,
+        height: 11,
+      },
+      shadowOpacity: 0.57,
+      shadowRadius: 15.19,
+
+      elevation: 23,
+    },
     container: {
       flex: 1,
     },
@@ -85,6 +118,7 @@ export default (): IHomeStyle => {
       fontWeight: 'bold',
       marginTop: 20,
       marginHorizontal: 32,
+      color: '#111417',
     },
     cardFavorite: {
       marginRight: 12,
@@ -175,6 +209,63 @@ export default (): IHomeStyle => {
     listCard: {
       paddingLeft: 32,
       paddingRight: 12,
+    },
+
+    viewCardNearest: {
+      backgroundColor: '#fff',
+      marginHorizontal: 32,
+      marginTop: 12,
+      borderRadius: 12,
+      paddingVertical: 12,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      paddingHorizontal: 8,
+    },
+    viewCardStreet: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    cardDescription: {
+      marginLeft: 12,
+    },
+    cardImageHotel: {
+      shadowColor: '#ccc',
+      shadowOffset: {
+        width: 0,
+        height: 3,
+      },
+      shadowOpacity: 0.29,
+      shadowRadius: 4.65,
+
+      elevation: 7,
+    },
+    cardDescriptionText: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      color: '#111417',
+      marginLeft: 4,
+    },
+    cardViewDescription: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    cardStreetText: {
+      fontSize: 12,
+      marginTop: 4,
+    },
+    cardStreetButton: {
+      backgroundColor: '#DFF3F9',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 32,
+      width: 32,
+      borderRadius: 6,
+      marginTop: 22,
+    },
+    cardStreetTextMi: {
+      fontSize: 12,
+      color: '#111417',
     },
   });
 };

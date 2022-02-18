@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ImageBackground} from 'react-native';
+
+import {HotelBackground} from '../../assets';
 
 const Hotel = (): JSX.Element => {
   return (
-    <View>
+    <ImageBackground source={HotelBackground} style={{flex: 1}}>
       <Text>Home</Text>
-    </View>
+    </ImageBackground>
   );
 };
 
